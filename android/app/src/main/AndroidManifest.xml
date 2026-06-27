@@ -41,5 +41,29 @@
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
         </intent>
+        <!-- url_launcher: https/http links (Google Maps, WhatsApp web) -->
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="http"/>
+        </intent>
+        <!-- url_launcher: telephone links -->
+        <intent>
+            <action android:name="android.intent.action.DIAL"/>
+        </intent>
+        <!-- url_launcher: WhatsApp native app -->
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="whatsapp"/>
+        </intent>
+        <!-- url_launcher: Google Maps native app -->
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="geo"/>
+        </intent>
     </queries>
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
